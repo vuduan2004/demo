@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Red Box</title>
+    <style>
+        #black-box {
+            width: 100%;
+            height: 1000px;
+            background-color: black;
+            position: relative;
+        }
+
+        #red-box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="black-box">
+        <div id="red-box"></div>
+    </div>
+    <script>
+        var startTime;
+        var redBox = document.getElementById("red-box");
+        var blackBox = document.getElementById("black-box");
+
+        function getRandomPosition() {
+            var maxX = blackBox.clientWidth - redBox.clientWidth;
+            var maxY = blackBox.clientHeight - redBox.clientHeight;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            return { x: randomX, y: randomY };
+        }
+
+        function displayRedBox() {
+            var position = getRandomPosition();
+            redBox.style.left = position.x + "px";
+            redBox.style.top = position.y + "px";
+            redBox.style.display = "block";
+            startTime = Date.now();
+        }
+
+        redBox.addEventListener("click", function() {
+            var endTime = Date.now();
+            var duration = (endTime - startTime) / 100;
+            redBox.style.display = "none";
+            setTimeout(displayRedBox, Math.random() * 100);
+        });
+
+        window.onload = displayRedBox; 
+       
+
+
+        var score = 0;
+var gameStartTime = 0;
+var gameTimeLimit = 10 * 1000; // 10 giây (đổi sang mili giây).
+var redBox = document.getElementById("red-box");
+
+function startGame() {
+    // Bắt đầu một lượt chơi mới.
+    score = 0; // Đặt điểm về 0
+    gameStartTime = Date.now(); // Bắt đầu thời gian chơi.
+    displayRedBox();
+}
+
+function displayRedBox() {
+    var position = getRandomPosition();
+    redBox.style.left = position.x + "px";
+    redBox.style.top = position.y + "px";
+    redBox.style.display = "block";
+
+    // Khi ô màu đỏ xuất hiện, bắt đầu tính thời gian và kiểm tra thời gian kết thúc trò chơi.
+    var intervalId = setInterval(function () {
+        var currentTime = Date.now();
+        var elapsedTime = currentTime - gameStartTime;
+
+        if (elapsedTime >= gameTimeLimit) {
+            clearInterval(intervalId); // Dừng vòng lặp thời gian nếu đạt đủ thời gian.
+            redBox.style.display = "none"; // Ẩn ô màu đỏ.
+            alert("Kết thúc lượt chơi! Điểm của bạn: " + score); // Hiển thị điểm.
+            startGame(); // Bắt đầu lượt chơi mới sau khi kết thúc.
+        }
+    }, 1000); // Kiểm tra thời gian mỗi giây.
+
+// Xử lý khi người chơi nhấn vào ô màu đỏ.
+redBox.addEventListener("click", function () {
+    score++; // Tăng điểm lên 1 sau mỗi lần nhấn.
+    redBox.style.display = "none"; // Ẩn ô màu đỏ.
+});
+}
+
+startGame(); // Bắt đầu trò chơi khi trang web được nạp.
+
+</script>
+</body>
+</html>

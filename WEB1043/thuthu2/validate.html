@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="validate-form">
+        <div>
+            <label for="">Khach hang</label>
+            <input id="khachhang" class="input" type="text" placeholder="Khach hang">
+            <i id="check-khachhang" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Loai hang</label>
+            <select onchange="updateDongia()" name="loaihang" id="loaihang">
+                <option value="loai1">loai 1</option>
+                <option value="loai2">loai 2</option>
+                <option value="loai3">loai 3</option>
+            </select>
+            
+        </div>
+        <br>
+        <div>
+            <label for="">Don gia</label>
+            <input type="text" id="dongia" class="input" placeholder="Don gia">
+            <i id="check-dongia" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">So luong</label>
+            <input type="text" id="soluong" class="input" placeholder="So luong">
+            <i id="check-soluong" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Thanh tien</label>
+            <input type="text" id="thanhtien" class="input" placeholder="Thanh tien">
+            <i id="check-thanhtien" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Noi nhan hang</label>
+            <input onclick="updatePhiVanChuyen()" type="radio" id="noithanh" name="noinhanhang" value="noithanh">
+            <label for="">Noi thanh</label>
+            <input onclick="updatePhiVanChuyen()" type="radio" id="ngoaithanh" name="noinhanhang" value="ngoaithanh">
+            <label for="">Ngoai thanh</label>
+            <i id="check-noinhanhang" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Phi van chuyen</label>
+            <input type="text" id="phivanchuyen" class="input" placeholder="Phi van chuyen">
+        </div>
+        <br>
+        <input type="button" onclick="datMua()" value="DAT MUA" >
+    </form>
+    <script src="validateform.js"></script>
+</body>
+</html>

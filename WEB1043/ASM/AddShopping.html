@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .themMoiSanPham{
+            width: 30%;
+            border: 1px solid #444;
+            margin: auto;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 2px 2px 5px #ddd;
+        }
+        .themMoiSanPham label, input {
+             width: 100%;
+             display: block;
+        }
+        .themMoiSanPham label {
+            padding: 20px;
+        }
+        .themMoiSanPham input {
+            margin-top: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .themMoiSanPham button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            background-color: #F7442E;
+            color: #ddd;
+        }
+        .themMoiSanPham button:hover{
+             background-color: #c53624;
+        }
+    </style>
+</head>
+<body>
+    <div class="themMoiSanPham">
+     <label for="hinhAnh">Hình ảnh sản phẩm</label>
+     <input type="text" id="hinhAnh">
+     <label for="ten">Tên sản phẩm</label>
+     <input type="text" id="ten">
+     <label for="giaGoc">Giá gốc</label>
+     <input type="text" id="giaGoc">
+     <label for="phanTramGiamGia">Giảm giá (%) - Giá trị 0-1</label>
+     <input type="text" id="phanTramGiamGia">
+     <label for="khuVuc">Khu vực</label>
+    <input type="text" id="khuVuc">
+        <button onclick="onClickTaoSanPham()">Tạo sản phẩm</button>
+    </div>
+    <script>
+            function onClickTaoSanPham(){
+                    console.log("....");
+                    var nodeHinhAnh = document.getElementById('hinhAnh');
+                    var hinhAnh = nodeHinhAnh.value;
+                    console.log("...." + hinhAnh);
+                    var nodeTen = document.getElementById('ten');
+                    var ten = nodeTen.value;
+                    console.log("...." + ten);
+                    var nodeGiaGoc = document.getElementById('giaGoc');
+                    var giaGoc = nodeGiaGoc.value;
+                    console.log("...." + giaGoc);
+                    var nodePhamTramGiamGia = document.getElementById('phanTramGiamGia');
+                    var phanTramGiamGia = nodePhamTramGiamGia.value;
+                    console.log("...." + phanTramGiamGia);
+                    var nodekhuVuc = document.getElementById('khuVuc');
+                    var khuVuc = nodekhuVuc.value;
+                    console.log("...." + khuVuc);
+            } 
+    </script>
+</body>
+</html>

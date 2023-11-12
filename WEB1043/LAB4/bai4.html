@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windown</title>
+    <script>
+        var wd;
+        function mo(){
+            wd=window.open("");
+        }
+        function dong(){
+            if(wd.closed==false){
+                wd.close();
+            }
+        }
+        function kt(){
+            if(wd.closed==false){
+                alert("tab moi chua dc dong");
+            }
+            else{
+                alert("tab moi da dc dong");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button1" value="open" onclick="mo()">Mở cửa sổ mới</button>
+    <button id="button2" value="close" onclick="dong()">Đóng cửa sổ mới</button>
+    <button id="button3" value="Check" onclick="kt()">Kiểm tra cửa sổ mói đã đóng hay chưa</button>
+</body>
+</html>

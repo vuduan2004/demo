@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="">Name</label>
+        <input class="input" id="name" type="text" placeholder="Name">
+        <br>
+        <i id="check-name" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Age</label>
+            <input class="input" id="age" type="text" placeholder="Age">
+            <br>
+            <i id="check-age" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Email</label>
+            <input class="input" id="email" type="text" placeholder="Email">
+            <i id="check-email" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Current PassWord</label>
+            <input class="input" id="current-password" type="text" placeholder="Current password">
+            <i id="check-current-password" class="check"></i>
+            
+        </div>
+        <br>
+        <div>
+            <label for="">New password</label>
+            <input class="input" id="new-password" type="text" placeholder="New password">
+            <i id="check-new-password" class="check"></i>
+        </div>
+            <br>
+            <div>
+                <label for="">Re password</label>
+                <input class="input" id="re-password" type="text" placeholder="Re password">
+                <i id="check-re-password" class="check"></i>
+            </div>
+            <br>
+            <input type="button" value="ChangePass" onclick="changePass()">
+    </form>
+    <script src="validateform.js"></script>
+</body>
+</html>

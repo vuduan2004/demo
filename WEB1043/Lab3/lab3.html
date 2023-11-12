@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lab3.js">
+        
+    </script>
+</head>
+<body >
+ <h3 onclick="bai1();">bai1</h3> 
+ <h3 onclick="bai2();">bai2</h3> 
+ <h3 onclick="bai4();">bai4</h3> 
+ <button onclick="nguoichon('Búa')">Búa</button>
+ <button onclick="nguoichon('Kéo')">Kéo</button>
+ <button onclick="nguoichon('Bao')">Bao</button>
+ <h2 id="kq"></h2>
+ <script>
+    function nguoichon(chon) {
+        var luachonMayTinh = ["Búa", "Kéo", "Bao"][Math.floor(Math.random() * 3)];
+        var ketqua = "";
+        
+        if (chon === luachonMayTinh) {
+            ketqua = "Hòa!";
+        } else if ((chon === "Búa" && luachonMayTinh === "Kéo") ||
+                   (chon === "Kéo" && luachonMayTinh === "Bao") ||
+                   (chon === "Bao" && luachonMayTinh === "Búa")) {
+            ketqua = "Bạn thắng!";
+        } else {
+            ketqua = "Máy tính thắng!";
+        }
+        
+
+        document.getElementById("kq").innerHTML = "Bạn chọn " + chon + "<br>Máy tính chọn " + luachonMayTinh + "<br> Kết quả: " + ketqua;
+    }
+    
+
+</script>
+ 
+</body>
+
+</html>

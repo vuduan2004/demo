@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="validate-form-container">
+        <div>
+            <label for="">Khach hang</label>
+            <input id="khachHang" class="input-form" type="text" placeholder="Khach hang">
+            <i id="check-khachhang" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Loai hang</label>
+            <select onchange="updateDonGia()" name="loaiHang" id="input-loaihang">
+                <option value="loai1">loai 1</option>
+                <option value="loai2">loai 2</option>
+                <option value="loai3">loai 3</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="">Don gia</label>
+            <input id="input-dongia" class="input-form" type="text" placeholder="Don gia">
+            <i id="check-dongia" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">So luong</label>
+            <input id="input-soluong" class="input-form" type="text" placeholder="So luong">
+            <i id="check-soluong" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Thanh tien</label>
+            <input id="input-thanhtien" class="input-form" type="text" placeholder="thanh tien">
+            <i id="check-thanhtien" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="">Noi nhan hang</label>
+            <input onclick="updatePhiVanChuyen()" type="radio" name="noiNhanHang" id="noiThanh" value="noiThanh">
+            <label for="noiNhanHang1">Noi thanh</label>
+            <input onclick="updatePhiVanChuyen()" type="radio" name="noiNhanHang" id="ngoaiThanh" value="ngoaiThanh">
+            <label for="">Ngoai thanh</label>
+            <br>
+            <i id="check-noinhanhang" class="check"></i>
+        </div>
+        <br>
+        <div>
+            <label for="phiVanChuyen">Phi van chuyen</label>
+            <input id="input-phivanchuyen" class="input-form" type="text" placeholder="Phi van chuyen">
+            <i id="check-phivanchuyen" class="check"></i>
+        </div>
+        <input onclick="datMua()" type="button" value="DAT MUA">
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

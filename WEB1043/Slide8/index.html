@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <button onclick="showLocation()">bg</button>
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="file" onchange="onUploadFile(this.files)" placeholder="vui long chon 1, 2">
+        <div id="messaage"></div>
+    </form>
+    <script>
+        function showLocation(){
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(getLocation);
+            } else alert("Trinh duyet hong tra");
+            
+        }
+        function getLocation(position){
+                let location = position.coords.latitude + " : " +
+                position.coords.longitude;
+                document.getElementById(location).innerText = location;   
+            }
+        function onUploadFile(files){
+            let mess= document.getElementById("message");
+            console.log(files[0].name);
+            mess.innerText = files[0].length;
+            var test = files[0].type;
+            alert(test);
+            var test2 = JSON.stringify(files[0]);
+            alert(test2);
+        
+        }
+        function onSubmidValidate(){
+
+        }
+    </script>
+    <audio controls>
+            <source src="">
+    </audio>
+</body>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/knMcZXg2pXE?si=58F6EQ6SjKXfDxgS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</html>

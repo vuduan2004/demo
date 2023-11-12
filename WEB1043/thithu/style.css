@@ -1,0 +1,21 @@
+/* form{
+    padding: 50px;
+    width: 300px;
+    border-radius: 5px solid #ddd;
+    
+} */
+.input{
+    width: 100%;
+}
+.check {
+    color: red;
+    float: right;
+}
+.validate-form-container{
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-right: 200px;
+    border: 1px solid gray;
+}

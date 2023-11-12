@@ -1,0 +1,14 @@
+.slideShow-container{
+    text-align: center;
+    
+}
+.validate-form{
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.check {
+    color: red;
+}

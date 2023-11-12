@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div style="color: red;" id="error"></div>
+        <input onblur="console.log('onBlur');"
+        onchange="console.log(event.target.tk.value);" type="text" placeholder="Username ... " name="tk" id="tk">
+        <input type="password" placeholder="Password ... " name="mk" id="mk">
+        <input type="number" placeholder="Your age ?" name="age" id="age">
+        <input type="checkbox" value="Male" name="gender" id="Male">
+        <label for="Male">Male</label>
+        <input type="checkbox" value="Female" name="gender" id="Female">
+        <label for="Female">Female</label>
+        <input type="checkbox" value="Other" name="gender" id="Other">
+        <label for="Other">Other</label>
+        <button type="submit" onclick="Login();">Login</button>
+    </form>
+    <script>
+        function Login(){
+            var username = document.getElementById('tk');
+            var p = event.target.parentElement;
+            var user = p.tk.value;
+            var pass = p.mk.value;
+            var genders = p.gender;
+            for(let i =0; i< genders.length; i++){
+                console.log(genders[i].value);
+            }
+            alert('xin chao:' +user);
+        }
+    </script>
+</body>
+</html>

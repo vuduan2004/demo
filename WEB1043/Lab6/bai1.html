@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .active{
+            display: block!important;
+        }
+        .mytext{
+            display: none;
+        }
+        .title{
+            font-size: 1.5em;
+            background-color: aqua;
+        }
+    </style>
+    <div class="container">
+        <div class="title">Title#1</div>
+        <div class="mytext">just some text#1</div>
+        <div class="title">Title#2</div>
+        <div class="mytext">just some <text id="2"></text></div>
+        <div class="title">Title#3</div>
+        <div class="mytext">just some text#1</div>
+
+    </div>
+    <script >
+        const menus=document.querySelectorAll(".title");
+        const openText=document.querySelectorAll(".mytext");
+        menus.forEach((el)=>{
+            el.addEventListener("click",(e)=>{
+                console.log(el.nextElementSibling);
+            remover;
+            el.nextElementSibling.classList.toggle("active");
+            })
+          
+        })
+        function remover(){
+            openText.forEach((el)=>{
+                ele.classList.remover("active");    
+            });
+        }
+    
+    </script>
+</body>
+</html>
